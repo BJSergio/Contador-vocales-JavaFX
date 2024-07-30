@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.javafx.contarvocales.controladores.ContarVocales">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Fichero">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#cerrarVentana" text="Salir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#mostrarInformacion" text="Acerca de ..." />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label text="Contador de vocales">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="areaTexto" maxWidth="430.0" prefHeight="140.0" prefWidth="475.0">
+         <VBox.margin>
+            <Insets bottom="30.0" top="30.0" />
+         </VBox.margin>
+      </TextArea>
+      <HBox alignment="CENTER" prefHeight="80.0" prefWidth="495.0" spacing="15.0">
+         <children>
+            <Label text="Aes:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="etiquetaA" disable="true" editable="false" prefHeight="15.0" prefWidth="30.0" />
+            <Label text="Es:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="etiquetaE" disable="true" editable="false" prefHeight="15.0" prefWidth="30.0" />
+            <Label text="Íes:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="etiquetaI" disable="true" editable="false" prefHeight="15.0" prefWidth="30.0" />
+            <Label text="Oes:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="etiquetaO" disable="true" editable="false" prefHeight="15.0" prefWidth="30.0" />
+            <Label text="Úes:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="etiquetaU" disable="true" editable="false" prefHeight="15.0" prefWidth="30.0" />
+         </children>
+      </HBox>
+      <Button fx:id="btLimpiar" disable="true" mnemonicParsing="false" onAction="#limpiar" text="Limpiar">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/iconoLimpiar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>
